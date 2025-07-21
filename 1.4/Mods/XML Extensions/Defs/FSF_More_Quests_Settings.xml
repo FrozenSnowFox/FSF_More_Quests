@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	<XmlExtensions.SettingsMenuDef>
+		<defName>FrozenSnowFoxMoreQuestsSettings</defName> <!--Can be anything unique with no periods-->
+		<modId>FrozenSnowFox.MoreQuests</modId> <!--MUST be the same as the one entered earlier-->    
+		<label>FrozenSnowFox More Quests</label> <!-- This is what displays as your mod's name-->    
+		<settings> <!--This is where you define what settings are in the settings menu-->
+
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(187,0,0)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>For any changed settings to take effect the game must be restarted.</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFMoreQuestsModWarning</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<li Class="XmlExtensions.Setting.Text">
+				<text>More Quests Settings</text>
+				<font>Medium</font>
+				<anchor>Middle</anchor>
+				<tKey>FSFMoreQuestsSettingsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+			
+			<!-- More Quests -->
+			
+			<li Class="XmlExtensions.Setting.Checkbox">
+				<label>More Quests</label>
+				<key>FSFMoreQuestsOn</key>
+				<defaultValue>false</defaultValue>
+				<tKey>FSFMoreQuestsMoreQuestsTitle</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor">
+				<color>(163,177,188)</color>
+			</li>
+			<li Class="XmlExtensions.Setting.Text">
+				<text>Allows you to customise how frequently quests appear.</text>
+				<tKey>FSFMoreQuestsMoreQuestsOnDesc</tKey>
+			</li>
+			<li Class="XmlExtensions.Setting.SetColor"/>
+			<li Class="XmlExtensions.Setting.ToggleableSettings">
+				<key>FSFMoreQuestsOn</key>
+				<caseTrue>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFMoreQuestsonDays</key>
+						<defaultValue>12</defaultValue>
+						<min>1</min>
+						<max>15</max>
+						<label>onDays</label>
+						<tKey>FSFMoreQuestsMoreQuestsonDays</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Numeric">
+						<key>FSFMoreQuestsnumIncidentsRange</key>
+						<defaultValue>2</defaultValue>
+						<min>1</min>
+						<max>15</max>
+						<label>numIncidentsRange</label>
+						<tKey>FSFMoreQuestsMoreQuestsnumIncidentsRange</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.Slider">
+						<key>FSFMoreQuestsminSpacingDays</key>
+						<defaultValue>3.0</defaultValue>
+						<min>0.1</min>
+						<max>15</max>
+						<decimals>1</decimals>
+						<label>minSpacingDays {FSFMoreQuestsMoreQuestsminSpacingDays}</label>
+						<tKey>FSFMoreQuestsMoreQuestsminSpacingDays</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+					<li Class="XmlExtensions.Setting.SetColor">
+						<color>(163,177,188)</color>
+					</li>
+					<li Class="XmlExtensions.Setting.Text">
+						<text>Input a value to adjust the amount of quests generated within a timeframe.  The minSpacingDays (minimum days between quests) must allow the numIncidentsRange (number of quests) to fit within onDays (how many days before this block of quests ends) otherwise the game will throw errors.\nVanilla (12, 2, 3), Double Vanilla (12, 4, 1), Triple Vanilla (12, 6, 1), Daily (1, 1, 0.5).</text>
+						<tKey>FSFMoreQuestsMoreQuestsDesc</tKey>
+					</li>
+					<li Class="XmlExtensions.Setting.SetColor"/>
+				</caseTrue>
+			</li>
+			
+			
+			
+			<li Class="XmlExtensions.Setting.GapLine">
+			</li>
+						
+		</settings>
+	</XmlExtensions.SettingsMenuDef>
+
+</Defs>
